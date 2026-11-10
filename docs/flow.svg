@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 704" width="900" height="704" role="img">
+  <title>发票报销助手处理流程</title>
+  <desc>发票采集、本地识别按票种分流、汇总人工复核、Playwright 自动填报、人工终审提交五个阶段，机器只填不交。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#57606A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="704" fill="#FFFFFF"/>
+  <text x="40" y="42" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="22" font-weight="500" fill="#1F2328">发票报销助手处理流程</text>
+  <text x="40" y="66" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#57606A">机器负责识别与填入，人做复核与最终提交；发票数据与登录态全程留在本地</text>
+
+  <rect x="260" y="90" width="380" height="64" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="450" y="116" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="16" font-weight="500" fill="#0C447C">1  发票采集</text>
+  <text x="450" y="140" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#185FA5">照片 / PDF / HEIC  →  inbox/</text>
+  <line x1="450" y1="154" x2="450" y2="180" stroke="#57606A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="182" width="720" height="190" rx="14" fill="#F7F9FC" stroke="#B5D4F4" stroke-width="1"/>
+  <text x="110" y="210" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="15" font-weight="500" fill="#0C447C">2  本地识别（按票种分流）</text>
+
+  <rect x="105" y="226" width="210" height="96" rx="8" fill="#FFFFFF" stroke="#85B7EB" stroke-width="1"/>
+  <text x="210" y="254" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="15" font-weight="500" fill="#0C447C">二维码优先</text>
+  <text x="210" y="278" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#185FA5">增值税票图片</text>
+  <text x="210" y="300" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="12" fill="#57606A">字段零误差</text>
+
+  <rect x="345" y="226" width="210" height="96" rx="8" fill="#FFFFFF" stroke="#85B7EB" stroke-width="1"/>
+  <text x="450" y="254" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="15" font-weight="500" fill="#0C447C">PDF 文本解析</text>
+  <text x="450" y="278" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#185FA5">电子发票 PDF</text>
+  <text x="450" y="300" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="12" fill="#57606A">字段零误差</text>
+
+  <rect x="585" y="226" width="210" height="96" rx="8" fill="#FFFFFF" stroke="#85B7EB" stroke-width="1"/>
+  <text x="690" y="254" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="15" font-weight="500" fill="#0C447C">OCR 兜底</text>
+  <text x="690" y="278" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#185FA5">火车票 · 行程单</text>
+  <text x="690" y="300" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="12" fill="#57606A">抽日期与金额，人工复核</text>
+
+  <text x="110" y="348" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="12" fill="#57606A">二维码 / PDF 无法解析时自动降级；仍不确定的票标记「待人工」，不自动猜测</text>
+  <line x1="450" y1="372" x2="450" y2="398" stroke="#57606A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="260" y="400" width="380" height="64" rx="10" fill="#FAEEDA" stroke="#BA7517" stroke-width="1"/>
+  <text x="450" y="426" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="16" font-weight="500" fill="#633806">3  汇总与人工复核</text>
+  <text x="450" y="450" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#854F0B">out/reimburse.xlsx · 核对金额 · 状态改「通过」</text>
+  <line x1="450" y1="464" x2="450" y2="490" stroke="#57606A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="260" y="492" width="380" height="64" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="450" y="518" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="16" font-weight="500" fill="#0C447C">4  自动填报</text>
+  <text x="450" y="542" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#185FA5">Playwright + Chrome · 逐张填入并暂存</text>
+  <line x1="640" y1="524" x2="670" y2="524" stroke="#BA7517" stroke-width="1" stroke-dasharray="3 3"/>
+  <rect x="670" y="492" width="200" height="96" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="1"/>
+  <text x="686" y="518" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="14" font-weight="500" fill="#633806">安全边界</text>
+  <text x="686" y="542" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#854F0B">机器只填不交</text>
+  <text x="686" y="564" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#854F0B">提交永远由人工完成</text>
+  <line x1="450" y1="556" x2="450" y2="582" stroke="#57606A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="260" y="584" width="380" height="64" rx="10" fill="#FAEEDA" stroke="#BA7517" stroke-width="1"/>
+  <text x="450" y="610" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="16" font-weight="500" fill="#633806">5  人工终审并提交</text>
+  <text x="450" y="634" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#854F0B">在报销网站核对后自行点提交</text>
+
+  <rect x="260" y="668" width="14" height="14" rx="3" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="284" y="680" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="12" fill="#57606A">机器执行</text>
+  <rect x="380" y="668" width="14" height="14" rx="3" fill="#FAEEDA" stroke="#BA7517" stroke-width="1"/>
+  <text x="404" y="680" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif" font-size="12" fill="#57606A">人工环节</text>
+</svg>
