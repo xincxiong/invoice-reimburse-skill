@@ -1,0 +1,35 @@
+# 报销网站选择器配置(Phase 2)
+# 现场校准步骤:
+#   1. Chrome 打开报销网站的"发票录入"页
+#   2. 右键各输入框 → 检查 → 复制 selector(优先 id,其次 name,最后带稳定属性的 css)
+#   3. 逐项填到下面,删掉不存在的项
+# 网站改版时只改本文件,不动 fill.py
+
+# 发票录入页 URL(登录后进入的页面)
+invoice_page_url: "https://报销网站/发票录入页面地址"
+
+# 字段 → 页面元素 selector 映射
+selectors:
+  invoice_type: "#invoiceType"
+  invoice_code: "input[name='invoiceCode']"
+  invoice_no: "#invoiceNo"
+  date: "input[name='invoiceDate']"
+  check_code: "#checkCode"
+  seller: "input[name='sellerName']"
+  buyer: "input[name='buyerName']"
+  amount_excl_tax: "#amountExTax"
+  tax: "#taxAmount"
+  amount_total: "#amountTotal"
+
+# 下拉框若非原生 select(常见于国产 UI 组件),改用 click 序列:
+#   invoice_type_click: "#invoiceType"
+#   invoice_type_option: "li[data-value='04']"
+
+# 暂存按钮(注意:不配置提交按钮,提交永远人工)
+save_button: "button:has-text('暂存')"
+
+# 每张票填完后的等待秒数(给网站留响应时间)
+wait_seconds_after_save: 2
+
+# 跳过 Excel 中复核状态不等于"通过"的行
+only_fill_reviewed_pass: true
