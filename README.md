@@ -8,7 +8,7 @@
 
 ## 安装（只需一次）
 
-1. 在本页右侧 Releases 下载 `invoice-reimburse.zip`（也可以在仓库 `dist/` 目录里下载同一个文件）
+1. 下载 [invoice-reimburse.zip](https://github.com/xincxiong/invoice-reimburse-skill/releases/latest/download/invoice-reimburse.zip)（最新版；本页右侧 Releases 和仓库 `dist/` 目录里也有同一个文件）
 2. 双击解压，得到 `invoice-reimburse` 文件夹
 3. 打开“终端”，粘贴下面这行并回车：
 
@@ -80,5 +80,7 @@ mkdir -p ~/.workbuddy/skills && mv ~/Downloads/invoice-reimburse ~/.workbuddy/sk
 - 仓库里 `scripts/` 是全部代码，`references/calibration.md` 是网站选择器校准说明
 
 ## 更新
+
+当前版本 v1.0.1（2026-11-11）：skill 本体增加首次使用待确认项与对话式调整指引，助手会主动引导确认并代改配置。旧版用户重新下载即可。
 
 重新下载新版 zip 覆盖 `~/.workbuddy/skills/invoice-reimburse/`，回到 `~/invoice-reimburse/` 目录再跑一次 `bash ~/.workbuddy/skills/invoice-reimburse/scripts/setup.sh` 即可；已核对过的数据和网站配置都会保留。
